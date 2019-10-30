@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
   });
 })
 
-app.post('/webhook', function (req, res){
-  res.send('POST!');
+app.post('/iPost', function(req, res) {
+    res.send('POST!');
 });
 
 app.listen(port, () => {
