@@ -9,9 +9,7 @@ const PORT = process.env.PORT || 9999;
 const bodyParser = require('body-parser');
 
 // Import the appropriate class
-const {
-  WebhookClient
-} = require('dialogflow-fulfillment');
+
 
 
 app
@@ -23,6 +21,9 @@ app
       console.log('POST: /');
       console.log('Body: ',req.body);
 
+      const {
+        WebhookClient
+      } = require('dialogflow-fulfillment');
 
       //Create an instance
       const agent = new WebhookClient({
@@ -70,6 +71,8 @@ app
       intentMap.set('Amount_Food_Pond_Number', pondNumber);
       intentMap.set('Amount_Food_WGH', wghNumber);
       agent.handleRequest(intentMap);
+
+      res.status(200).send('OK')
   })
   .use('/postStatus', function (req, res) {
     res.json({
