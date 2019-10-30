@@ -19,7 +19,7 @@ app
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: false}))
     .get('/', (req, res) => res.send(`Hi there! This is a nodejs-express-api-init running on PORT: ${ PORT }`))
-    .use('/webhook', function (req, res) {
+    .post('/webhook', function (req, res) {
       console.log('POST: /');
       console.log('Body: ',req.body);
 
