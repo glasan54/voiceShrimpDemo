@@ -16,7 +16,7 @@ app
     .use(server.static(__dirname + '/public'))
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: false}))
-    .get('/', (req, res) => res.send(`Hi there! This is a nodejs-express-api-init running on PORT: ${ PORT }`))
+    .get('/', (req, res) => res.send(`Edit 1 PORT: ${ PORT }`))
     .post('/webhook', function (req, res) {
       console.log('POST: /');
       console.log('Body: ',req.body);
