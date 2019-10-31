@@ -20,12 +20,10 @@ app
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: false}))
     .get('/', (req, res) => res.send(`Edit 1 PORT: ${ PORT }`))
-    .post('/webhook', function (req, res) {
+    .post('/webhook', function ( request, response ) {
       console.log('POST: /');
-      console.log('Body: ',req.body);
+      console.log('Body: ',request.body);
 
-      const request = req;
-      const response = res;
       //Create an instance
       const agent = new WebhookClient({ request, response });
 
