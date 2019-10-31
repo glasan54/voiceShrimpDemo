@@ -50,7 +50,7 @@ app
         
         
      async function pondNumber(agent){
-        pond  = agent.contexts[0].parameters['pool'];
+        pond  = agent.contexts[0].parameters['pond'];
         agent.add("บ่อหมายเลข : " + pond ) ;
         agent.add("โปรดระบุปริมาณอาหารคงเหลือ");
       }
