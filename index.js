@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 9999;
 const bodyParser = require('body-parser');
 
 // Import the appropriate class
+const {
+  WebhookClient
+} = require('dialogflow-fulfillment');
 
 
 
@@ -21,9 +24,6 @@ app
       console.log('POST: /');
       console.log('Body: ',req.body);
 
-      const {
-        WebhookClient
-      } = require('dialogflow-fulfillment');
 
       //Create an instance
       const agent = new WebhookClient({
@@ -44,6 +44,9 @@ app
       console.log('session: ', agent.session);
 
       //Function Location
+  function location(agnet){
+    agent.add(`It'me Loacation.`);
+  }
       function farmName(agent){
         farm = agent.contexts[0].parameters['name'];
         agent.add("ฟาร์มชื่อ : " + farm) ;
