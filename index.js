@@ -73,7 +73,6 @@ app
       intentMap.set('Amount_Food_WGH', wghNumber);
       agent.handleRequest(intentMap);
 
-      response.status(200).send('OK')
   })
   .use('/postStatus', function (req, res) {
     res.json({
