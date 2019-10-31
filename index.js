@@ -41,11 +41,12 @@ app
       console.log('locale: ' + agent.locale);
       console.log('query: ', agent.query);
       console.log('session: ', agent.session);
+      console.log('context: ',agent.context[0])
 
       //Function Location
-  function location(agnet){
-    return agent.add(`It'me Loacation.`);
-  }
+      function location(agent) {
+         agent.add('Welcome to Thailand.');
+      }
       function farmName(agent){
         farm = agent.contexts[0].parameters['name'];
         agent.add("ฟาร์มชื่อ : " + farm) ;
