@@ -43,7 +43,7 @@ app
 
       //Function Location
      async function location(agent) {
-         agent.add('Welcome to Thailand.');
+        await agent.add('Welcome to Thailand.');
       }
      async function farmName(agent){
         farm = agent.contexts[0].parameters['name'];
