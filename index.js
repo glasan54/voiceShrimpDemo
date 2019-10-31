@@ -26,10 +26,8 @@ app
 
 
       //Create an instance
-      const agent = new WebhookClient({
-        request: req,
-        response: res
-      });
+      const agent = new WebhookClient({ req, res });
+
 
       let farm = "null";
       let pond  = "null";
