@@ -13,7 +13,10 @@ const {
   WebhookClient
 } = require('dialogflow-fulfillment');
 
-
+let farm = "null";
+let pond  = "null";
+let wgh = "null";
+let total = "null";
 
 app
     .use(server.static(__dirname + '/public'))
@@ -26,12 +29,6 @@ app
 
       //Create an instance
       const agent = new WebhookClient({ request, response });
-
-
-      let farm = "null";
-      let pond  = "null";
-      let wgh = "null";
-      let total = "null";
 
       //Test get value of WebhookClient
       console.log('agentVersion: ' + agent.agentVersion);
