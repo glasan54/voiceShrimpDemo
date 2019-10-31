@@ -42,23 +42,23 @@ app
       console.log('context: ',agent.context[0])
 
       //Function Location
-      function location(agent) {
+     async function location(agent) {
          agent.add('Welcome to Thailand.');
       }
-      function farmName(agent){
+     async function farmName(agent){
         farm = agent.contexts[0].parameters['name'];
         agent.add("ฟาร์มชื่อ : " + farm) ;
         agent.add("โปรดระบุหมายเลขของบ่อ");
       }
         
         
-      function pondNumber(agent){
+     async function pondNumber(agent){
         pond  = agent.contexts[0].parameters['pool'];
         agent.add("บ่อหมายเลข : " + pond ) ;
         agent.add("โปรดระบุปริมาณอาหารคงเหลือ");
       }
       
-      function wghNumber(agent){
+     async function wghNumber(agent){
         wgh = agent.contexts[0].parameters['number.original'];
         total = farm + " บ่อหมายเลข " + pond  + ` \nปริมาณอาหารคงเหลือ ` + wgh + " กิโลกรัม.";
         agent.add(total);
@@ -73,7 +73,7 @@ app
       intentMap.set('Amount_Food_WGH', wghNumber);
       agent.handleRequest(intentMap);
 
-      res.status(200).send('OK')
+      response.status(200).send('OK')
   })
   .use('/postStatus', function (req, res) {
     res.json({
