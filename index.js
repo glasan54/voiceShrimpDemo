@@ -36,7 +36,6 @@ app
       console.log('locale: ' + agent.locale);
       console.log('query: ', agent.query);
       console.log('session: ', agent.session);
-      console.log('context: ',agent.context[0])
 
       //Function Location
      async function location(agent) {
