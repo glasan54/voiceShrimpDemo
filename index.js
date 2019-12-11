@@ -14,7 +14,7 @@ const {
 } = require('dialogflow-fulfillment');
 
 class Dorry {
-  constructor(farm = 'test', pond  = 'CG-800'){
+  constructor(farm = 'test', pond  = PORT){
     this._farm = farm;
     this._pond = pond;
   }
