@@ -13,10 +13,25 @@ const {
   WebhookClient
 } = require('dialogflow-fulfillment');
 
-let farm = "praud";
-let pond  = "134";
+class dorry {
+  constructor(farm = 'บางสระเก้า', pond  = 'CG-800'){
+    this._farm = farm;
+    this._pond = pond;
+  }
+  get farm(){
+    return this._farm;
+  } 
+  get pond(){
+    return this._pond;
+  }
+}
+
+const dorry = new dorry
+let farm = dorry.farm;
+let pond = dorry.pond;
 let wgh = "null";
 let total = "null";
+
 
 app
     .use(server.static(__dirname + '/public'))
