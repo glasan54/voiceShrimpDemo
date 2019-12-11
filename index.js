@@ -42,14 +42,14 @@ app
         await agent.add('Welcome to Thailand.');
       }
      async function farmName(agent){
-        farm = agent.contexts[0].parameters['name'];
+        //farm = agent.contexts[0].parameters['name'];
         agent.add("ฟาร์มชื่อ : " + farm) ;
         agent.add("โปรดระบุหมายเลขของบ่อ");
       }
         
         
      async function pondNumber(agent){
-        pond  = agent.contexts[0].parameters['pond'];
+       // pond  = agent.contexts[0].parameters['pond'];
         agent.add("บ่อหมายเลข : " + pond ) ;
         agent.add("โปรดระบุปริมาณอาหารคงเหลือ");
       }
