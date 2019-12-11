@@ -13,21 +13,6 @@ const {
   WebhookClient
 } = require('dialogflow-fulfillment');
 
-/*class dorry {
-  constructor(farm = 'test', pond  = 'CG-800'){
-    this._farm = farm;
-    this._pond = pond;
-  }
-  get farm(){
-    return this._farm;
-  } 
-  get pond(){
-    return this._pond;
-  }
-}
-
-const dorry = new dorry();*/
-
 class Dorry {
   constructor(farm = 'test', pond  = 'CG-800'){
     this._farm = farm;
