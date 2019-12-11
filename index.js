@@ -13,7 +13,7 @@ const {
   WebhookClient
 } = require('dialogflow-fulfillment');
 
-class dorry {
+/*class dorry {
   constructor(farm = 'test', pond  = 'CG-800'){
     this._farm = farm;
     this._pond = pond;
@@ -26,9 +26,32 @@ class dorry {
   }
 }
 
-const dorry = new dorry();
-let farm = dorry.farm;
-let pond = dorry.pond;
+const dorry = new dorry();*/
+
+class Surgeon {
+  constructor(name = 'dio', department = 'mata') {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+  get name(){
+    return this._name;
+  } 
+  get department(){
+    return this._department;
+  }
+  get remainingVacationDays(){
+    return this._remainingVacationDays;
+  }
+  takeVacationDays(dayOff){
+    this._remainingVacationDays -= dayOff;
+  }
+  
+}
+
+const surgeonCurry = new Surgeon();
+let farm = 'test';
+let pond = 'CG-800';
 let wgh = "null";
 let total = "null";
 
@@ -71,7 +94,7 @@ app
       
      async function wghNumber(agent){
         wgh = agent.contexts[0].parameters['number.original'];
-        total = farm + " บ่อหมายเลข " + pond  + ` \nปริมาณอาหารคงเหลือ ` + wgh + " กิโลกรัม.";
+        total = farm + " บ่อหมายเลข " + pond  + ` \nปริมาณอาหารคงเหลือ ` + wgh + " กิโลกรัม." + surgeonCurry.department;
         agent.add(total);
         //agent.add("ต้องการแก้ไขหรือไม่?");
       }
