@@ -26,7 +26,7 @@ class dorry {
   }
 }
 
-const dorry = new dorry
+const dorry = new dorry();
 let farm = dorry.farm;
 let pond = dorry.pond;
 let wgh = "null";
