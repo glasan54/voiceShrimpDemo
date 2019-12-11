@@ -28,30 +28,23 @@ const {
 
 const dorry = new dorry();*/
 
-class Surgeon {
-  constructor(name = 'dio', department = 'mata') {
-    this._name = name;
-    this._department = department;
-    this._remainingVacationDays = 20;
+class Dorry {
+  constructor(farm = 'test', pond  = 'CG-800'){
+    this._farm = farm;
+    this._pond = pond;
   }
-  get name(){
-    return this._name;
+  get farm(){
+    return this._farm;
   } 
-  get department(){
-    return this._department;
-  }
-  get remainingVacationDays(){
-    return this._remainingVacationDays;
-  }
-  takeVacationDays(dayOff){
-    this._remainingVacationDays -= dayOff;
+  get pond(){
+    return this._pond;
   }
   
 }
 
-const surgeonCurry = new Surgeon();
-let farm = 'test';
-let pond = 'CG-800';
+const dorry = new Dorry();
+let farm = dorry.farm;
+let pond = dorry.pond;
 let wgh = "null";
 let total = "null";
 
@@ -94,7 +87,7 @@ app
       
      async function wghNumber(agent){
         wgh = agent.contexts[0].parameters['number.original'];
-        total = farm + " บ่อหมายเลข " + pond  + ` \nปริมาณอาหารคงเหลือ ` + wgh + " กิโลกรัม." + surgeonCurry.department;
+        total = farm + " บ่อหมายเลข " + pond  + ` \nปริมาณอาหารคงเหลือ ` + wgh + " กิโลกรัม.";
         agent.add(total);
         //agent.add("ต้องการแก้ไขหรือไม่?");
       }
