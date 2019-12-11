@@ -13,8 +13,8 @@ const {
   WebhookClient
 } = require('dialogflow-fulfillment');
 
-let farm = "null";
-let pond  = "null";
+let farm = "praud";
+let pond  = "134";
 let wgh = "null";
 let total = "null";
 
